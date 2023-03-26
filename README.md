@@ -1,14 +1,20 @@
 # WAD-Project
 
-A Node Typescript Project API
+A Travel Planning website 
+
+Both frontend and backend is kept in this repository
 
 ## Tech Stack
 
 - Node
 - Express
+- Angular
+- Redux
 - MongoDB with mongoose
 - Typescript
 - Prettier
+- Axois
+
 
 ## Suggested VsCode Pluggins
 
@@ -38,6 +44,28 @@ Change to Project Directory
 ```bash
   cd WAD-Project
 ```
+1. Switch to Client side project directory
+
+```bash
+  cd Client
+```
+Install Dependencies
+
+```bash
+  npm install
+```
+
+Start Angular App
+
+```bash
+  npm run start
+```
+
+2. Switch to Server side project directory
+```
+cd ..
+cd Server
+```
 
 Install Dependencies
 
@@ -45,7 +73,7 @@ Install Dependencies
   npm install
 ```
 
-Start React App
+Start Server
 
 ```bash
   npm run start:dev

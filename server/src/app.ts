@@ -1,11 +1,15 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import routes from './routes';
 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Routes
+app.use('/user', routes.userRoutes);
 
 // Home Route
 app.get('/', cors(), async (req: Request, res: Response) => {

@@ -8,7 +8,10 @@ export class AuthService {
   private BASE_URL = 'http://localhost:8080/';
   constructor(private http: HttpClient) {}
   login(data: any) {
-    console.log('point 1');
-    return this.http.post(`${this.BASE_URL}/user/login`, data);
+    return this.http.post(`${this.BASE_URL}user/login`, data);
+  }
+
+  register(data: any) {
+    return this.http.post(`${this.BASE_URL}user/register`, data);
   }
 }

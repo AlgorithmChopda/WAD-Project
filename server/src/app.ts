@@ -8,6 +8,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const corsOptionForCredentials = {
+  origin: 'http://localhost:4200',
+  methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'],
+  credentials: true,
+};
+
+app.use(cors(corsOptionForCredentials));
+
 // Routes
 app.use('/user', routes.userRoutes);
 

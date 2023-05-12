@@ -52,15 +52,25 @@
         </div>
         <div class="signup-form">
           <div class="title">Signup</div>
-          <form>
+          <form [formGroup]="registerformGroup" (ngSubmit)="registerProcess()">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required />
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                  formControlName="username"
+                />
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required />
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  required
+                  formControlName="email"
+                />
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
@@ -68,6 +78,7 @@
                   type="password"
                   placeholder="Enter your password"
                   required
+                  formControlName="password"
                 />
               </div>
               <div class="button input-box">

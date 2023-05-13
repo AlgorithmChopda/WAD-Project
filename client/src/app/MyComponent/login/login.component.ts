@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   formGroup!: FormGroup;
   registerformGroup!: FormGroup;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.initForm();
@@ -35,24 +36,27 @@ export class LoginComponent implements OnInit {
 
   loginProcess() {
     if (this.formGroup.valid) {
-      this.authService.login(this.formGroup.value).subscribe((result: any) => {
-        if (result) {
+      this.authService.login(this.formGroup.value).subscribe(
+        (result: any) => {
           alert(result.message);
-        } else {
-          alert('No such user found');
-        }
-      });
+          this.router.navigate(['/home']);
+        },
+        (err) => {
+          alert(err.error.message);
+        },
+      );
     }
   }
 
   registerProcess() {
     console.log('point 0');
     if (this.registerformGroup.valid) {
-      this.authService
-        .register(this.registerformGroup.value)
-        .subscribe((result: any) => {
-          console.log('point 1');
-        });
+      this.authService.register(this.registerformGroup.value).subscribe(
+        (result: any) => alert(result.message),
+        (err) => {
+          alert(err.error.message);
+        },
+      );
     }
   }
 }

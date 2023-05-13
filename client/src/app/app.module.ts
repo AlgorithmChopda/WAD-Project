@@ -7,8 +7,9 @@ import { LoginComponent } from './MyComponent/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './MyComponent/home/home.component';
+import { SearchPageComponent } from './MyComponent/search-page/search-page.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, SearchPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

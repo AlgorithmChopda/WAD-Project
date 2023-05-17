@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.formGroup.value).subscribe(
         (result: any) => {
           alert(result.message);
+          localStorage.setItem('status', 'true');
           this.router.navigate(['/home']);
         },
         (err) => {

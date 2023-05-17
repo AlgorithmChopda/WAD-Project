@@ -8,4 +8,14 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(public router: Router) {}
+  ngOnInit() {
+    if (localStorage.getItem('status') !== 'true') {
+      this.router.navigate(['/login']);
+    }
+  }
+
+  handleLogout() {
+    localStorage.removeItem('status');
+    this.router.navigate(['/login']);
+  }
 }

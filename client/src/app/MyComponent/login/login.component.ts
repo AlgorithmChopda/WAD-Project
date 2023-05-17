@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit {
   }
 
   registerProcess() {
-    console.log('point 0');
     if (this.registerformGroup.valid) {
       this.authService.register(this.registerformGroup.value).subscribe(
         (result: any) => alert(result.message),

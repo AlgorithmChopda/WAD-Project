@@ -37,8 +37,6 @@ export const register = async (req: Request, res: Response) => {
       .status(200)
       .json({ message: 'user account created successfully' });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ message: 'Error during Deletion, Please try again later' });
+    return res.status(500).json({ message: 'Error while creating account' });
   }
 };

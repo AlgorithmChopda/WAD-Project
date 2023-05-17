@@ -9,7 +9,17 @@
   background-image: url('https://images.pexels.com/photos/1450340/pexels-photo-1450340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  isolation: isolate;
 }
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
 .main {
   display: flex;
   justify-content: space-between;

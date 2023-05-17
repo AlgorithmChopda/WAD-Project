@@ -1,18 +1,26 @@
 <body>
   <div class="major">
+    <div class="backdrop"></div>
     <div class="main">
       <div class="small">
         <h1>Travel.</h1>
       </div>
       <div class="small">
-        <input class="cont1" type="text" placeholder="Search" />
-        <button class="cont2" type="submit">Search</button>
+        <input class="cont1" type="text" placeholder="Source" />
+        <input class="cont1" type="text" placeholder="Destination" />
+        <button
+          class="cont2"
+          type="submit"
+          (click)="router.navigate(['/search'])"
+        >
+          Search
+        </button>
       </div>
     </div>
 
     <div class="container">
       <div class="head">
-        <h1>Pack your bags.</h1>
+        <h1>Love INDIA!</h1>
         <h1>We're going on vacation!</h1>
       </div>
       <div class="para">
@@ -92,4 +100,11 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function searchFunction() {
+      alert('called');
+      // windows.location.href = 'http://localhost:4200/search';
+    }
+  </script>
 </body>

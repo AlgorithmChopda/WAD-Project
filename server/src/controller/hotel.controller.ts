@@ -12,7 +12,6 @@ export const getData = async (req: Request, res: Response) => {
   //TODO: add the service folder for the hotel controller
   try {
     const data = await hotelServices.getHotel(dest);
-    console.log(data);
     return res.status(200).json({ message: 'OK', data });
   } catch (err) {
     return res.status(500).json({ error: 'something went wrong' });

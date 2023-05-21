@@ -18,6 +18,7 @@ app.use(cors(corsOptionForCredentials));
 
 // Routes
 app.use('/user', routes.userRoutes);
+app.use('/hotel', routes.hotelRoutes);
 
 // Home Route
 app.get('/', cors(), async (req: Request, res: Response) => {

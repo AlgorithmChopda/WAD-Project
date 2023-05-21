@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 
+interface IHotel {
+  name: string;
+  location: string;
+  address: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-hotel',
   templateUrl: './hotel.component.html',
@@ -9,7 +16,7 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class HotelComponent {
   dest: any = '';
-  hotelData: any = '';
+  hotelData: IHotel[] = [];
 
   constructor(
     private authService: AuthService,

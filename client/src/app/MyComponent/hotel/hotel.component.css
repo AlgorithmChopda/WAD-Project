@@ -5,7 +5,6 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
-
 .container {
   width: 100%;
 }
@@ -27,7 +26,21 @@
   font-size: 30px;
 }
 .sites ul li {
-  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  list-style: none;
+  color: rgb(70, 70, 70);
+  line-height: 1.5;
+}
+.icon1 {
+  height: 20px;
+  width: auto;
+}
+.icon2 {
+  max-height: 20px;
+  width: 30px;
+  padding: 10px 10px 0 0;
 }
 .hotelDetails p {
   font-size: 20px;
@@ -35,11 +48,11 @@
 .price p {
   font-size: 20px;
 }
-.book button{
-    width: 130px;
-    padding: 5px;
-    font-size: 20px;
-    border: 1px solid black;
-    border-radius: 3px;
-    cursor: pointer;
+.book button {
+  width: 130px;
+  padding: 5px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
 }

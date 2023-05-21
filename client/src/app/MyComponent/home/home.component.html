@@ -21,12 +21,13 @@
       </div>
       <div class="small">
         <input class="cont1" type="text" placeholder="Source" />
-        <input class="cont1" type="text" placeholder="Destination" />
-        <button
-          class="cont2"
-          type="submit"
-          (click)="router.navigate(['/search'])"
-        >
+        <input
+          [(ngModel)]="destinationValue"
+          class="cont1"
+          type="text"
+          placeholder="Destination"
+        />
+        <button class="cont2" type="submit" (click)="searchSubmit()">
           Search
         </button>
 

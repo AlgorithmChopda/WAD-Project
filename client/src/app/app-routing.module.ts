@@ -10,8 +10,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchPageComponent },
-  { path: 'hotel', component: HotelComponent },
-  
+  { path: 'hotel/:data', component: HotelComponent },
 ];
 
 @NgModule({

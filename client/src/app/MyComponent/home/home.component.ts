@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  public destinationValue: string = '';
+
   constructor(public router: Router) {}
   ngOnInit() {
     if (localStorage.getItem('status') !== 'true') {
@@ -17,5 +19,10 @@ export class HomeComponent {
   handleLogout() {
     localStorage.removeItem('status');
     this.router.navigate(['/login']);
+  }
+
+  searchSubmit() {
+    console.log(this.destinationValue);
+    this.router.navigate(['/hotel', this.destinationValue]);
   }
 }

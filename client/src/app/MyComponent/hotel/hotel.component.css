@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+.main {
+  display: flex;
+  padding: 30px;
+  margin: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.first img {
+  height: 300px;
+}
+.sec {
+  padding: 0 0 0 50px;
+  width: 50%;
+  line-height: 1.5;
+}
+.site p {
+  font-size: 30px;
+}
+.sites ul li {
+  font-size: 20px;
+}
+.hotelDetails p {
+  font-size: 20px;
+}
+.price p {
+  font-size: 20px;
+}
+.book button{
+    width: 130px;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}

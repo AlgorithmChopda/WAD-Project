@@ -5,13 +5,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  private BASE_URL = 'http://localhost:8080/';
+  private BASE_URL = 'http://localhost:8080';
   constructor(private http: HttpClient) {}
   login(data: any) {
-    return this.http.post(`${this.BASE_URL}user/login`, data);
+    return this.http.post(`${this.BASE_URL}/user/login`, data);
   }
 
   register(data: any) {
-    return this.http.post(`${this.BASE_URL}user/register`, data);
+    return this.http.post(`${this.BASE_URL}/user/register`, data);
+  }
+
+  getHotel(dest: string) {
+    return this.http.post(`${this.BASE_URL}/hotel`, dest);
   }
 }

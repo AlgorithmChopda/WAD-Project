@@ -73,3 +73,8 @@
   border-color: #4cae4c;
   color: white;
 }
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}

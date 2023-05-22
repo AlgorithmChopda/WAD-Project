@@ -22,7 +22,6 @@ export class HomeComponent {
   }
 
   searchSubmit() {
-    console.log(this.destinationValue);
     this.router.navigate(['/hotel', this.destinationValue]);
   }
 }

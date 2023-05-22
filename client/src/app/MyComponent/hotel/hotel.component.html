@@ -2,10 +2,7 @@
   <div class="container" *ngFor="let hotel of this.hotelData">
     <div class="main">
       <div class="first">
-        <img
-          src="https://i0.wp.com/onedayitinerary.com/wp-content/uploads/2020/02/One-day-in-Mumbai-Itinerary.jpg?w=800&ssl=1"
-          alt=""
-        />
+        <img [src]="sourceImage" alt="" />
       </div>
       <div class="sec">
         <div class="site">
@@ -43,7 +40,7 @@
       </div>
     </div>
   </div>
-  <div class="button-container">
+  <div class="button-container" (click)="searchPage()">
     <button class="cont2" type="submit">Adventure Activities</button>
   </div>
 </body>

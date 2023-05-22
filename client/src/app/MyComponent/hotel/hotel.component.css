@@ -56,3 +56,20 @@
   border-radius: 3px;
   cursor: pointer;
 }
+
+.adventure-activities {
+  color: blue;
+  text-align: end;
+}
+
+.cont2 {
+  padding: 8px;
+  border: none;
+  margin: 0 5px 0 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  color: white;
+}
